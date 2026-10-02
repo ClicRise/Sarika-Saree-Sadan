@@ -1,0 +1,4 @@
+- [ ] Build the Sarika Saree Sadan website using the supplied design reference and photographs, including newly uploaded 11–16.
+- [ ] Add a product carousel with named items and item-specific WhatsApp price enquiries.
+- [ ] Add direct WhatsApp, calling, Instagram, directions, address, and business hours.
+- [ ] Create and use a fitting brand logo; verify desktop and mobile presentation.
