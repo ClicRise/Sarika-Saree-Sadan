@@ -3,21 +3,21 @@ import { useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, Instagram, MapPin, Menu, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/sarika-logo-alternative.png";
-import photo1 from "@/assets/sarika-1.png.asset.json";
-import photo2 from "@/assets/sarika-2.png.asset.json";
-import photo3 from "@/assets/sarika-3.png.asset.json";
-import photo4 from "@/assets/sarika-4.png.asset.json";
-import photo5 from "@/assets/sarika-5.png.asset.json";
-import photo6 from "@/assets/sarika-6.png.asset.json";
-import photo7 from "@/assets/sarika-7.png.asset.json";
-import photo8 from "@/assets/sarika-8.png.asset.json";
-import photo9 from "@/assets/sarika-9.png.asset.json";
-import photo11 from "@/assets/sarika-11.png.asset.json";
-import photo12 from "@/assets/sarika-12.png.asset.json";
-import photo13 from "@/assets/sarika-13.png.asset.json";
-import photo14 from "@/assets/sarika-14.png.asset.json";
-import photo15 from "@/assets/sarika-15.png.asset.json";
-import photo16 from "@/assets/sarika-16.png.asset.json";
+import photo1 from "@/assets/1.png";
+import photo2 from "@/assets/2.png";
+import photo3 from "@/assets/3.png";
+import photo4 from "@/assets/4.png";
+import photo5 from "@/assets/5.png";
+import photo6 from "@/assets/6.png";
+import photo7 from "@/assets/7.png";
+import photo8 from "@/assets/8.png";
+import photo10 from "@/assets/10.png";
+import photo11 from "@/assets/11.png";
+import photo12 from "@/assets/12.png";
+import photo13 from "@/assets/13.png";
+import photo14 from "@/assets/14.png";
+import photo15 from "@/assets/15.png";
+import photo16 from "@/assets/16.png";
 
 const PHONE = "+919412705060";
 const MAPS = "https://maps.app.goo.gl/7UQgcvLuzKGnsnCD8";
@@ -25,19 +25,20 @@ const INSTAGRAM = "https://www.instagram.com/sarikasareesadan/";
 const enquiry = (item?: string) => `https://wa.me/${PHONE.slice(1)}?text=${encodeURIComponent(item ? `Hello Sarika Saree Sadan, I'm interested in ${item}. Could you please share the price and details?` : "Hello Sarika Saree Sadan, I'd like to enquire about your collection.")}`;
 
 const products = [
-  { image: photo1.url, title: "Olive Embroidered Drape", category: "DRAPED ENSEMBLE", alt: "Olive draped ensemble with intricate embroidered blouse" },
-  { image: photo2.url, title: "Slate Embellished Drape", category: "DRAPED ENSEMBLE", alt: "Slate blue draped outfit with embroidered blouse" },
-  { image: photo3.url, title: "Powder Blue Ensemble", category: "OCCASION WEAR", alt: "Powder blue embellished ethnic ensemble" },
-  { image: photo4.url, title: "Silver Shimmer Drape", category: "OCCASION WEAR", alt: "Silver sequin blouse with flowing drape" },
-  { image: photo5.url, title: "Midnight Lace Ensemble", category: "OCCASION WEAR", alt: "Midnight blue lace blouse and drape" },
-  { image: photo6.url, title: "Ivory Saree Edit", category: "SAREES", alt: "Model wearing an elegant ivory saree" },
-  { image: photo8.url, title: "Maroon Heirloom Saree", category: "SAREES", alt: "Model in ivory saree and richly embroidered maroon blouse" },
-  { image: photo11.url, title: "Midnight Ruffle Drape", category: "SAREES", alt: "Midnight blue pre-draped saree with shimmering blouse" },
-  { image: photo12.url, title: "Sunshine Embroidered Lehenga", category: "LEHENGAS", alt: "Golden yellow lehenga with floral embroidery" },
-  { image: photo13.url, title: "Teal Heritage Lehenga", category: "LEHENGAS", alt: "Teal lehenga with intricate silver embroidery" },
-  { image: photo14.url, title: "Golden Celebration Lehenga", category: "LEHENGAS", alt: "Gold flared lehenga with embroidered blouse" },
-  { image: photo15.url, title: "Coral Bridal Lehenga", category: "LEHENGAS", alt: "Coral bridal lehenga with ornate embellishment" },
-  { image: photo16.url, title: "Rose Bridal Lehenga", category: "LEHENGAS", alt: "Rose pink bridal lehenga with detailed embroidery" },
+  { image: photo1, title: "Olive Embroidered Drape", category: "DRAPED ENSEMBLE", alt: "Olive draped ensemble with intricate embroidered blouse" },
+  { image: photo2, title: "Slate Embellished Drape", category: "DRAPED ENSEMBLE", alt: "Slate blue draped outfit with embroidered blouse" },
+  { image: photo3, title: "Powder Blue Ensemble", category: "OCCASION WEAR", alt: "Powder blue embellished ethnic ensemble" },
+  { image: photo4, title: "Silver Shimmer Drape", category: "OCCASION WEAR", alt: "Silver sequin blouse with flowing drape" },
+  { image: photo5, title: "Midnight Lace Ensemble", category: "OCCASION WEAR", alt: "Midnight blue lace blouse and drape" },
+  { image: photo6, title: "Ivory Saree Edit", category: "SAREES", alt: "Model wearing an elegant ivory saree" },
+  { image: photo8, title: "Maroon Heirloom Saree", category: "SAREES", alt: "Model in ivory saree and richly embroidered maroon blouse" },
+  { image: photo10, title: "Ruby Embroidered Suit", category: "SUITS & DRESSES", alt: "Ruby embroidered suit displayed on a hanger" },
+  { image: photo11, title: "Midnight Ruffle Drape", category: "SAREES", alt: "Midnight blue pre-draped saree with shimmering blouse" },
+  { image: photo12, title: "Sunshine Embroidered Lehenga", category: "LEHENGAS", alt: "Golden yellow lehenga with floral embroidery" },
+  { image: photo13, title: "Teal Heritage Lehenga", category: "LEHENGAS", alt: "Teal lehenga with intricate silver embroidery" },
+  { image: photo14, title: "Golden Celebration Lehenga", category: "LEHENGAS", alt: "Gold flared lehenga with embroidered blouse" },
+  { image: photo15, title: "Coral Bridal Lehenga", category: "LEHENGAS", alt: "Coral bridal lehenga with ornate embellishment" },
+  { image: photo16, title: "Rose Bridal Lehenga", category: "LEHENGAS", alt: "Rose pink bridal lehenga with detailed embroidery" },
 ];
 
 export const Route = createFileRoute("/")({
@@ -88,7 +89,7 @@ function Home() {
     </header>
 
     <section className="relative min-h-[610px] bg-ink text-primary-foreground md:min-h-[650px] lg:min-h-[680px]" aria-label="Sarika Saree Sadan collection">
-      <img src={photo7.url} alt="Model wearing a flowing ivory saree in a heritage courtyard" className="absolute inset-0 h-full w-full object-cover object-[56%_center] md:object-center" fetchPriority="high" />
+      <img src={photo7} alt="Model wearing a flowing ivory saree in a heritage courtyard" className="absolute inset-0 h-full w-full object-cover object-[56%_center] md:object-center" fetchPriority="high" />
       <div className="hero-shade absolute inset-0" /><div className="hero-bottom-shade absolute inset-0" />
       <div className="relative mx-auto flex min-h-[610px] max-w-[1440px] flex-col justify-center px-6 pb-16 pt-12 md:min-h-[650px] md:px-10 lg:min-h-[680px] xl:px-16">
         <div className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-gold md:text-[11px]"><span className="h-px w-9 bg-gold" /> EST. 1986 · MEERUT, INDIA</div>
@@ -131,7 +132,7 @@ function Home() {
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 xl:px-16">
         <div className="mb-10 text-center md:mb-14"><p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.21em] text-secondary">THE WORLD OF SARIKA</p><h2 className="font-display text-[35px] text-primary md:text-[52px]">Find your occasion</h2></div>
         <div className="grid gap-4 md:grid-cols-3 md:gap-6">
-          {[{ image: photo11.url, title: "Sarees", subtitle: "Timeless drapes", alt: "Midnight blue draped saree" }, { image: photo3.url, title: "Suits & Dresses", subtitle: "Everyday to extraordinary", alt: "Embellished powder blue outfit" }, { image: photo15.url, title: "Lehengas & Occasion Wear", subtitle: "Made for the moment", alt: "Coral bridal lehenga" }].map((item) => <a key={item.title} href={enquiry(item.title)} target="_blank" rel="noopener noreferrer" className="group image-zoom relative block aspect-[4/5] overflow-hidden bg-linen md:aspect-[4/5]"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover" /><div className="hero-bottom-shade absolute inset-0" /><div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 text-primary-foreground md:p-8"><div><p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-gold">{item.subtitle}</p><h3 className="mt-1 font-display text-[28px] md:text-[33px]">{item.title}</h3></div><ArrowUpRight size={23} strokeWidth={1.4} className="mb-1 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></div></a>)}
+          {[{ image: photo11, title: "Sarees", subtitle: "Timeless drapes", alt: "Midnight blue draped saree" }, { image: photo3, title: "Suits & Dresses", subtitle: "Everyday to extraordinary", alt: "Embellished powder blue outfit" }, { image: photo15, title: "Lehengas & Occasion Wear", subtitle: "Made for the moment", alt: "Coral bridal lehenga" }].map((item) => <a key={item.title} href={enquiry(item.title)} target="_blank" rel="noopener noreferrer" className="group image-zoom relative block aspect-[4/5] overflow-hidden bg-linen md:aspect-[4/5]"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover" /><div className="hero-bottom-shade absolute inset-0" /><div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 text-primary-foreground md:p-8"><div><p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-gold">{item.subtitle}</p><h3 className="mt-1 font-display text-[28px] md:text-[33px]">{item.title}</h3></div><ArrowUpRight size={23} strokeWidth={1.4} className="mb-1 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></div></a>)}
         </div>
       </div>
     </section>
@@ -143,7 +144,7 @@ function Home() {
           <div className="my-8 h-px w-16 bg-gold" /><p className="max-w-[470px] text-[14px] leading-8 text-primary-foreground/85">For decades, Sarika Saree Sadan has celebrated the beauty of women's ethnic wear. From the elegance of a saree to the joy of dressing for a celebration, discover styles that feel like you.</p>
           <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex w-fit items-center gap-3 border-b border-gold pb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary-foreground">Follow our story <ArrowUpRight size={16} /></a>
         </div>
-        <div className="min-h-[420px] lg:min-h-[620px]"><img src={photo6.url} alt="Ivory saree styled at a heritage palace" loading="lazy" className="h-full w-full object-cover" /></div>
+        <div className="min-h-[420px] lg:min-h-[620px]"><img src={photo6} alt="Ivory saree styled at a heritage palace" loading="lazy" className="h-full w-full object-cover" /></div>
       </div>
     </section>
 
